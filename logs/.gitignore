@@ -1,0 +1,5 @@
+# Remove it if you need add files in this directory to git
+# Ignore everything in this directory
+*
+# Except this file
+!.gitignore
