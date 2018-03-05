@@ -1,0 +1,224 @@
+<div id="documentConstent">
+
+    <section>
+        <h1 id="basic-implementation" data-i18n="documentation:BASIC_IMPLEMENTATION">Implementação Básica</h1>
+        <p data-i18n="documentation:LONG_TEXT_01">
+            Abaixo um exemplo básico em HTML com um modelo de implementação. Neste modelo observe que o retorno é um objeto com duas
+            propriedades(auth, nonce). A propriedade 'auth' com o valor 'TRUE' serve como Flag de conferência do status do
+            retorno, já a propriedade 'nonce' deve ser usada para recuperar os dados solicitados. Ao clicar no botão um QRCode
+            deve aparecer em sua tela.
+        </p>
+        <div>
+            <ul class="nav nav-tabs" role="tablist">
+                <li class="nav-item">
+                    <a class="nav-link active" data-toggle="tab" href="#sample-001" role="tab" aria-controls="sample-001" aria-selected="true">HTML</a>
+                </li>
+            </ul>
+            <div class="tab-content">
+                <div class="tab-pane fade show active" id="sample-001" role="tabpanel">
+                    <pre data-src='/samples/sample-001.html' class="language-html"></pre>
+                </div>
+            </div>
+        </div>
+        <hr />
+    </section>
+
+    <section>
+        <h1 id="omid_sintaxe" data-i18n="documentation:OMID_SINTAXE">OMID Sintaxe</h1>
+        <p data-i18n="documentation:LONG_TEXT_08">
+            Como parâmetros para o 'OMID' temos 'CID', 'ENV', 'fields':
+        </p>
+        <p>
+            <ul>
+                <li>
+                    <strong>CID</strong>:
+                    <span data-i18n="documentation:PARAM_DESC_CID">ID do CLiente (Obtido com a OriginalMy)</span>
+                </li>
+                <li>
+                    <strong>ENV</strong>:
+                    <span data-i18n="documentation:PARAM_DESC_ENV">Para teste: 'stag', para produção: 'prod'</span>
+                </li>
+                <li>
+                    <strong>fields</strong>:
+                    <span data-i18n="documentation:PARAM_DESC_FIELDS">Campos solicitados ao usuário</span>
+                    <ul>
+                        <li>
+                            <strong>birthday</strong>:
+                            <span data-i18n="documentation:PARAM_FIELDS_BIRTHDAY">Data de nascimento</span>
+                        </li>
+                        <li>
+                            <strong>blockchainid</strong>:
+                            <span data-i18n="documentation:PARAM_FIELDS_BLOCKCHAINID">Blockchain ID</span>
+                        </li>
+                        <li>
+                            <strong>email</strong>:
+                            <span data-i18n="documentation:PARAM_FIELDS_EMAIL">E-Mail</span>
+                        </li>
+                        <li>
+                            <strong>name</strong>:
+                            <span data-i18n="documentation:PARAM_FIELDS_NAME">Nome completo</span>
+                        </li>
+                        <li>
+                            <strong>namegov</strong>:
+                            <span data-i18n="documentation:PARAM_FIELDS_NAMEGOV">Nome na receita federal</span>
+                        </li>
+                        <li>
+                            <strong>id</strong>:
+                            <span data-i18n="documentation:PARAM_FIELDS_ID">Identificador único no país (Ex: CPF para o Brasil)</span>
+                        </li>
+                        <li>
+                            <strong>mobile_imei</strong>:
+                            <span data-i18n="documentation:PARAM_FIELDS_MOBILE_IMEI">IMEI do celular</span>
+                        </li>
+                        <li>
+                            <strong>mobile_brand</strong>:
+                            <span data-i18n="documentation:PARAM_FIELDS_MOBILE_BRAND">Marca do celular</span>
+                        </li>
+                        <li>
+                            <strong>mobile_model</strong>:
+                            <span data-i18n="documentation:PARAM_FIELDS_MOBILE_MODEL">Modelo do celular</span>
+                        </li>
+                        <li>
+                            <strong>mobile_so</strong>:
+                            <span data-i18n="documentation:PARAM_FIELDS_MOBILE_SO">Sistema Operacional do celular</span>
+                        </li>
+                        <li>
+                            <strong>mobile_so_version</strong>:
+                            <span data-i18n="documentation:PARAM_FIELDS_MOBILE_SO_VERSION">Versão do Sistema Operacional</span>
+                        </li>
+                        <li>
+                            <strong>mobile_screensize</strong>:
+                            <span data-i18n="documentation:PARAM_FIELDS_MOBILE_SCREENSIZE">Tamanho da tela do Celular</span>
+                        </li>
+                        <li>
+                            <strong>phone</strong>:
+                            <span data-i18n="documentation:PARAM_FIELDS_PHONE">Número do Celular</span>
+                        </li>
+                        <li>
+                            <strong>photo</strong>:
+                            <span data-i18n="documentation:PARAM_FIELDS_PHOTO">Um 'nonce' para obter a foto do usuário</span>
+                        </li>
+                        <li>
+                            <strong>photodocument</strong>:
+                            <span data-i18n="documentation:PARAM_FIELDS_PHOTODOCUMENT">Um 'nonce' para obter a foto do documento do usuário</span>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </p>
+        <div>
+            <ul class="nav nav-tabs" role="tablist">
+                <li class="nav-item">
+                    <a class="nav-link active" data-toggle="tab" href="#sample-005" role="tab" aria-controls="sample-005" aria-selected="true">JS</a>
+                </li>
+            </ul>
+            <div class="tab-content">
+                <div class="tab-pane fade show active" id="sample-005" role="tabpanel">
+                    <pre data-src="/samples/sample-005.js"></pre>
+                </div>
+            </div>
+        </div>
+        <hr />
+    </section>
+
+
+    <section>
+        <h1 id="preparing-nonce" data-i18n="documentation:PREPARING_NONCE">Preparando NONCE</h1>
+        <p data-i18n="documentation:LONG_TEXT_02">
+            As informações solicitadas em nosso exemplo são: 'name', 'blockchainid' e 'email'. O processamento da solicitação deve ser
+            descriptografado pelo BACK-END da aplicação, assim evitando expor suas chaves de criptografia.
+        </p>
+        <p data-i18n="documentation:LONG_TEXT_03">
+            Abaixo enviamos uma requisição AJAX com o 'nonce' obtido no retorno da chamada ao objeto OMID.
+        </p>
+        <div>
+            <ul class="nav nav-tabs" role="tablist">
+                <li class="nav-item">
+                    <a class="nav-link active" data-toggle="tab" href="#sample-002" role="tab" aria-controls="sample-002" aria-selected="true">JS</a>
+                </li>
+            </ul>
+            <div class="tab-content">
+                <div class="tab-pane fade show active" id="sample-002" role="tabpanel">
+                    <pre data-src="/samples/sample-002.js"></pre>
+                </div>
+            </div>
+        </div>
+        <hr />
+    </section>
+
+    <section>
+        <h1 id="obtaining-and-decrypting-data" data-i18n="documentation:OBTAINING_AND_DECRYPTING_DATA">Obtendo e descriptografando os dados</h1>
+        <p data-i18n="documentation:LONG_TEXT_04">
+            A linguagem de programação de sua aplicação deve ter suporte a UTF-8, Base64, Json e Decriptografia com Algoritmo 'aes256'.
+        </p>
+        <p data-i18n="documentation:LONG_TEXT_05">
+            O 'nonce' é enviado por meio de um requisição POST para nossa API. Essa requisição deve conter no HEADER a Autorização 'OMID_KEY'
+            e no corpo o 'cid' e o 'nonce'. O resultado dessa requisição retorna os dados do usuário ofuscados por um algoritimo
+            de criptografia.
+        </p>
+        <p data-i18n="documentation:LONG_TEXT_06">
+            O processo de descriptografar utiliza Cipher, com algoritimo 'aes256', mais a chave 'CRYPTOGRAPHY_KEY' e um 'IV'( ambus obitidos
+            na OriginalMy ). A string de dados criptografada do usuário deve passar pelo processo de decode do Base64 com
+            a entrada em UTF-8, sua saida é solicitada também em UTF-8 e o resultado deve ser uma string a ser parseada por
+            JSON.
+        </p>
+        <p data-i18n="documentation:LONG_TEXT_07">
+            A partir desse resultado e de posse dessas informações você pode processar o cadastro do usuário e efetuar seu login.
+        </p>
+        <div>
+            <ul class="nav nav-tabs" role="tablist">
+                <li class="nav-item">
+                    <a class="nav-link active" data-toggle="tab" href="#sample-003" role="tab" aria-controls="sample-003" aria-selected="true">Node</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="sample-004-tab" data-toggle="tab" href="#sample-004" role="tab" aria-controls="sample-004" aria-selected="false">PHP</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="sample-008-tab" data-toggle="tab" href="#sample-008" role="tab" aria-controls="sample-008" aria-selected="false">C#</a>
+                </li>
+            </ul>
+            <div class="tab-content">
+                <div class="tab-pane fade show active" id="sample-003" role="tabpanel">
+                    <pre data-src="/samples/sample-003.js"></pre>
+                </div>
+                <div class="tab-pane fade" id="sample-004" role="tabpanel" aria-labelledby="sample-004-tab">
+                    <pre data-src="/samples/sample-004.php"></pre>
+                </div>
+                <div class="tab-pane fade" id="sample-008" role="tabpanel" aria-labelledby="sample-008-tab">
+                    <pre data-src="/samples/sample-008.cs" class="language-csharp"></pre>
+                </div>
+            </div>
+        </div>
+        <hr />
+    </section>
+
+
+    <section>
+        <h1 id="getting-the-pictures" data-i18n="documentation:GETTING_THE_PICTURES">Obtendo as Imagens</h1>
+        <p data-i18n="documentation:LONG_TEXT_09">
+            Com o 'nonce' da imagem obtida no processo de descriptografia, uma nova requisição é necessária para
+            obter as imagens('photo' e 'photodocument'). Essa requisição deve ser enviada com o Header de Autorização comtento o 'OMID_KEY' e com os dados de 'CID' e 'Token'('nonce').
+        </p>
+        <div>
+            <ul class="nav nav-tabs" role="tablist">
+                <li class="nav-item">
+                    <a class="nav-link active" data-toggle="tab" href="#sample-006" role="tab" aria-controls="sample-006" aria-selected="true">Node</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="tab" href="#sample-007" role="tab" aria-controls="sample-007" aria-selected="false">PHP</a>
+                </li>
+            </ul>
+            <div class="tab-content">
+                <div class="tab-pane fade show active" id="sample-006" role="tabpanel">
+                    <pre data-src="/samples/sample-006.js"></pre>
+                </div>
+                <div class="tab-pane fade show" id="sample-007" role="tabpanel">
+                    <pre data-src="/samples/sample-007.php"></pre>
+                </div>
+            </div>
+        </div>
+        <hr />
+    </section>
+
+
+</div>

@@ -1,0 +1,51 @@
+<div id="startSessionID">
+    <h1 class="mt-5" data-i18n="home:IDENTIDADE_BLOCKCHAIN">Identidade Blockchain</h1>
+    <p class="lead" data-i18n="home:INFO-1">
+        Através do nosso app, nós fazemos a validação de identidade dos usuários. Após o cadastro completo, o sistema cria uma Identidade Blockchain que fica em posse do usuário. Através dessa identidade única e exclusiva, o usuário pode efetuar ações na internet, como efetuar login em sites sem colocar senha e preencher formulários, por exemplo.
+    </p>
+
+    <h2 class="mt-5" data-i18n="home:GETTING_START">Começando</h2>
+    <p class="lead">
+        <ul>
+            <li>
+                <span data-i18n="home:STEP_1">Baixe nosso App Android de Staging</span>
+                <a href="https://s3-sa-east-1.amazonaws.com/originalmy-app-staging/originalmy-app-testnet.apk"><i class="fas fa-download"></i> LINK</a>
+            </li>
+            <li>
+                <span data-i18n="home:STEP_2">Instale como Desenvolvedor em seu Celular</span>
+            </li>
+            <li>
+                <span data-i18n="home:STEP_3">Efetue o cadastro/login no App da OriginalMy, passando pelo processo de KYC (Identificação de Usuário)</span>
+            </li>
+            <li>
+                <span data-i18n="home:STEP_4">Clique no Botão("Entrar com OriginalMy") abaixo e use o App da OriginalMy (Blockchain ID) para efetuar um login de teste.</span>
+            </li>
+        </ul>
+    </p>
+    <div>
+        <div id="ORIGINALMY_MODAL"></div>
+        <div id="OMAUTHID"></div>
+        <button id="ORIGINALMY_BTN"></button>
+    </div>
+</div>
+
+<div id="loginSessionID" class="jumbotron" style="display:none">
+    <h2 class="display-4">
+        <span data-i18n="home:HELLO_USER">Olá,</span>
+        <span class="log-user-name">Usuário</span>
+    </h2>
+    <p class="lead" data-i18n="home:TEXT_1">Este é um exemplo de login retornando os campos "email", "name" e "blockchainid'.</p>
+    <hr class="my-4">
+    <p>
+        <ul>
+            <li><i class="fas fa-at"></i> <span class="log-user-email"></span></li>
+            <li><i class="fas fa-user"></i> <span  class="log-user-name"></span></li>
+            <li><i class="fas fa-qrcode"></i> <span  class="log-user-blockchainid"></span></li>
+        </ul>
+    </p>
+    <p class="lead">
+        <button id="btnBackId" class="btn btn-primary" >
+            <i class="fas fa-sign-out-alt"></i><span data-i18n="MAIN-BTN_BACK">Voltar</span>
+        </button>
+    </p>
+</div>
