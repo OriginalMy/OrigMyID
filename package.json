@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node ./bin/server.js",
-    "start-dev": "NODE_ENV=dev nodemon --watch src --inspect=0.0.0.0:9222 ./bin/server.js"
+    "start-dev": "NODE_ENV=devevelopment nodemon --watch src --inspect=0.0.0.0:9222 ./bin/server.js"
   },
   "repository": {
     "type": "git",

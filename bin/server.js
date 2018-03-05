@@ -7,7 +7,7 @@ const CFG_PATH = path.join(APP_PATH,'config');
 const SRC_PATH = path.join(APP_PATH,'src');
 const LOG_PATH = path.join(APP_PATH,'logs');
 
-const NODE_ENV = (process.env.NODE_ENV || 'prod').toLowerCase();
+const NODE_ENV = (process.env.NODE_ENV || 'production').toLowerCase();
 
 let configFilePath = path.join(CFG_PATH, 'environment', `${NODE_ENV}.json`);
 let loaderPath = path.join(SRC_PATH, 'config_loader', 'loader');
