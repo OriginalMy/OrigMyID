@@ -1,6 +1,5 @@
 const rp = require('request-promise');
 const crypto = require('crypto');
-const algorithm = 'aes-256-ctr';
 
 app.get("/auth/:nonce", function (req, res) {
 
