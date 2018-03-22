@@ -1,0 +1,29 @@
+{
+    "/" : {
+        "get" : {
+            "controller": "HomeController",
+            "action"    : "index"
+        }
+    },
+
+    "/demo" : {
+        "get" : {
+            "controller": "DemoController",
+            "action"    : "index"
+        }
+    },
+
+    "/demo/auth/(:nonce)?" : {
+        "get" : {
+            "controller": "DemoController",
+            "action"    : "auth"
+        }
+    },
+
+    "/documentation" : {
+        "get" : {
+            "controller": "DocumentationController",
+            "action"    : "index"
+        }
+    }
+}
