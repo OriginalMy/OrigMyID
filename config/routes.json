@@ -6,9 +6,16 @@
         }
     },
 
-    "/auth/(:nonce)?" : {
+    "/demo" : {
         "get" : {
-            "controller": "HomeController",
+            "controller": "DemoController",
+            "action"    : "index"
+        }
+    },
+
+    "/demo/auth/(:nonce)?" : {
+        "get" : {
+            "controller": "DemoController",
             "action"    : "auth"
         }
     },
