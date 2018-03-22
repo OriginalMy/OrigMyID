@@ -1,0 +1,11 @@
+{
+    "IDENTIDADE_BLOCKCHAIN" : "Blockchain Identity",
+    "INFO-1": "Through our app, we validate our users' identity. After the complete registration, the system creates a Blockchain Identity that is in the possession of the user. Through this unique and exclusive identity, the user can perform actions on the platform, such as signing contracts through the app or through the site, for example.",
+    "GETTING_START" : "Getting start",
+    "STEP_1" : "Download our Android Staging App",
+    "STEP_2" : "Install as a Developer on your Mobile",
+    "STEP_3" : "Make the registration / login in the OriginalMy App, going through the process of KYC (User Identification)",
+    "STEP_4" : "Click the ('Enter OriginalMy') button below and use the OriginalMy App ('Blockchain ID') to perform a test login.",
+    "HELLO_USER" : "Hello,",
+    "TEXT_1": "This is an example of a login returning the fields \"email\", \"name\" and \"blockchainid\"."
+}
