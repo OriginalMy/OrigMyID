@@ -40,11 +40,32 @@ code {
   width: 200px;
 }
 
+.row-space-20 {
+  margin-bottom: 20px;
+}
+
+.row-space-30 {
+  margin-bottom: 30px;
+}
+
 /* -------------- */
 #documentConstent section h1 {
   margin-top: 75px;
 }
 
+#homeConstent section h1 {
+  margin-top: 75px;
+}
+
+#homeConstent section {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+#homeConstent div.container {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
 
 /* Extra small devices (portrait phones, less than 576px) */
 @media (max-width: 575.98px) { 
