@@ -43,7 +43,29 @@
     </p>
     <p class="lead">
         <button id="btnBackId" class="btn btn-primary" >
-            <i class="fas fa-sign-out-alt"></i><span data-i18n="MAIN-BTN_BACK">Voltar</span>
+            <i class="fas fa-sign-out-alt"></i> <span data-i18n="MAIN-BTN_BACK">Voltar</span>
+        </button>
+        <button id="btnGetPhotoId" class="btn btn-primary" >
+            <i class="fas fa-image"></i> <span data-i18n="MAIN-BTN_GET_PHOTO">Obter Foto</span>
         </button>
     </p>
 </div>
+
+<div class="modal fade" id="photoModal" tabindex="-1" role="dialog" aria-labelledby="photoModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Image</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <img class="img-photo img-fluid img-thumbnail rounded mx-auto d-block" style="max-width: 200px;">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
