@@ -20,6 +20,13 @@
         }
     },
 
+    "/demo/get-photo/(:photononce)?" : {
+        "get" : {
+            "controller": "DemoController",
+            "action"    : "getPhoto"
+        }
+    },
+
     "/documentation" : {
         "get" : {
             "controller": "DocumentationController",
