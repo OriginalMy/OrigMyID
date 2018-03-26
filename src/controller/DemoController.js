@@ -55,5 +55,41 @@ class DemoController extends AbstractController {
             );
     }
 
+    getPhoto(req, res, next){
+    {
+        let OMID_ID = '01';
+        let OMID_KEY = 'ORIG-8742-DEVV';
+        let urlAPI = 'https://api1.testnet.originalmy.com/login/image';
+        let photononce = req.params.photononce;
+
+        let options = {
+            uri: urlAPI,
+            method: 'POST',
+            headers: {
+                'Cache-Control': 'no-cache',
+                'Content-Type': 'application/json',
+                'Authorization': OMID_KEY
+            },
+            json: true,
+            body: { 
+                "cid": OMID_ID,
+                "token": photononce 
+            }
+        };
+
+        return rp(options).
+            then(result => {
+                res.status(200).send(result);
+            }).catch(
+                (err) => {
+                    res.status(500).send({
+                        statusCode: 500,
+                        statusText: "Erro Interno",
+                    });
+                }
+            );
+        }
+    }
 }
+
 module.exports = DemoController;
