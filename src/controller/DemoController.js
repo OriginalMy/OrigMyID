@@ -16,8 +16,8 @@ class DemoController extends AbstractController {
 
         let OMID_ID = '06';
         let OMID_KEY = 'TEST-E123-1234';
-        let CRYPTOGRAPHY_KEY ='27F5DB12FB4F4D1A9EDE13E7C91CA99A';
-        let IV = "9383KJSKLL209329";
+        let CRYPTOGRAPHY_KEY ='AC483E3D9CC2474BB46CC215D0EA83CB';
+        let IV = "KJSKJ982983KK8HD";
         let urlAPI = 'https://api1.testnet.originalmy.com/login/user';
         let ALGORITHM = 'aes256';
         let nonce = req.params.nonce;

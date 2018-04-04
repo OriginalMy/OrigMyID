@@ -9,8 +9,8 @@ $app->get('/auth/{nonce}', function (Request $request, Response $response, array
     $urlAPI = 'https://api1.testnet.originalmy.com/login/user';
     $CID = '01';
     $OMID_KEY = 'ORIG-8742-DEVV';
-    $CRYPTOGRAPHY_KEY ='27F5DB12FB4F4D1A9EDE13E7C91CA99A';
-    $IV = "9383KJSKLL209329";
+    $CRYPTOGRAPHY_KEY ='AC483E3D9CC2474BB46CC215D0EA83CB';
+    $IV = "KJSKJ982983KK8HD";
     $ALGORITHM = 'AES-256-CBC';
     $nonce = $args['nonce'];
 
