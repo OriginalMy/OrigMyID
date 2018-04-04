@@ -1,6 +1,6 @@
 $(document).ready(function () {
 
-    var CID = '01';
+    var CID = '06';
     var ENV = 'stag';
     var fields = [
         'birthday',
