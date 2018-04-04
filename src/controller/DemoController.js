@@ -82,6 +82,7 @@ class DemoController extends AbstractController {
                 res.status(200).send(result);
             }).catch(
                 (err) => {
+                    console.log('err', err)
                     res.status(500).send({
                         statusCode: 500,
                         statusText: "Erro Interno",
