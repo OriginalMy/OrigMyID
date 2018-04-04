@@ -14,8 +14,8 @@ class DemoController extends AbstractController {
 
     auth(req, res, next){
 
-        let OMID_ID = '01';
-        let OMID_KEY = 'ORIG-8742-DEVV';
+        let OMID_ID = '06';
+        let OMID_KEY = 'TEST-E123-1234';
         let CRYPTOGRAPHY_KEY ='27F5DB12FB4F4D1A9EDE13E7C91CA99A';
         let IV = "9383KJSKLL209329";
         let urlAPI = 'https://api1.testnet.originalmy.com/login/user';
@@ -57,8 +57,8 @@ class DemoController extends AbstractController {
 
     getPhoto(req, res, next){
     {
-        let OMID_ID = '01';
-        let OMID_KEY = 'ORIG-8742-DEVV';
+        let OMID_ID = '06';
+        let OMID_KEY = 'TEST-E123-1234';
         let urlAPI = 'https://api1.testnet.originalmy.com/login/image';
         let photononce = req.params.photononce;
 
