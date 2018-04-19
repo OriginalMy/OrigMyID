@@ -30,5 +30,7 @@
     "PARAM_FIELDS_MOBILE_SCREENSIZE" : "Mobile Screen Size",
     "PARAM_FIELDS_PHONE" : "Mobile number",
     "PARAM_FIELDS_PHOTO" : "A 'nonce' to get the user's photo",
-    "PARAM_FIELDS_PHOTODOCUMENT" : "A 'nonce' to get the photo of the user document"
+    "PARAM_FIELDS_PHOTODOCUMENT" : "A 'nonce' to get the photo of the user document",
+    "PARAM_FIELDS_LATITUDE" : "The current geolocation position",
+    "PARAM_FIELDS_LONGITUDE" : "The current geolocation position"
 }
