@@ -23,7 +23,6 @@ $(document).ready(() => {
     if(!window.OMID){
         window.OMID = new OMID('01', 'stag', ['name', 'blockchainid', 'email', 'photo', 'latitude', 'longitude'], function(result){
             if(result.auth && result.nonce){
-                console.info("Nonce: " + result.nonce);
                 callAuth(result.nonce);
             }
         });
@@ -59,7 +58,7 @@ $(document).ready(() => {
         $.ajax({
             url : "/demo/get-photo/" + photoNonce,
             success: (result) => {
-                console.log(result);
+
                 btnPhotoLoading(false);
                 var img = photoModal.find('img.img-photo');
                 img.attr('src', result.data.image.data );
