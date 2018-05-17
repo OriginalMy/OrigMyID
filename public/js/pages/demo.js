@@ -58,7 +58,7 @@ $(document).ready(() => {
         $.ajax({
             url : "/demo/get-photo/" + photoNonce,
             success: (result) => {
-                console.log(result);
+
                 btnPhotoLoading(false);
                 var img = photoModal.find('img.img-photo');
                 img.attr('src', result.data.image.data );
