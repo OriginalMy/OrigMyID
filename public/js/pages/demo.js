@@ -20,7 +20,7 @@ $(document).ready(() => {
      * Neste retorno você era receber um objeto contendo as seguintes informações
      * { auth : true , nonce : ‘hash aleatório gerado pela plataforma’}
      */
-    if(window.OMID){
+    if(!window.OMID){
         window.OMID = new OMID('01', 'stag', ['name', 'blockchainid', 'email', 'photo'], function(result){
             if(result.auth && result.nonce){
                 console.info("Nonce: " + result.nonce);
