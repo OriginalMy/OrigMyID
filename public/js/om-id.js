@@ -172,7 +172,6 @@ OMID.prototype.validateAuthDataResult = function (data) {
       this.close();
       $("#OMAUTHID").html("<div class='alert alert-danger'>" + data.data.message + "</div>");
     }
-    //console.log('Error: ' + data.data.message);
   }
   else if (data && data.data && data.data.auth == 1){
     this.close();
