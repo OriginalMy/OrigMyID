@@ -20,10 +20,9 @@ $(document).ready(() => {
      * Neste retorno você era receber um objeto contendo as seguintes informações
      * { auth : true , nonce : ‘hash aleatório gerado pela plataforma’}
      */
-    if(window.OMID){
-        window.OMID = new OMID('01', 'stag', ['name', 'blockchainid', 'email', 'photo'], function(result){
+    if(!window.OMID){
+        window.OMID = new OMID('01', 'stag', ['name', 'blockchainid', 'email', 'photo', 'latitude', 'longitude'], function(result){
             if(result.auth && result.nonce){
-                console.info("Nonce: " + result.nonce);
                 callAuth(result.nonce);
             }
         });
@@ -44,6 +43,8 @@ $(document).ready(() => {
         loginSession.find('span.log-user-email').html(result.email.value);
         loginSession.find('span.log-user-name').html(result.name.value);
         loginSession.find('span.log-user-blockchainid').html(result.blockchainid.value);
+        loginSession.find('span.log-user-mobile_lat').html(result.latitude.value);
+        loginSession.find('span.log-user-mobile_lng').html(result.longitude.value);
 
         photoNonce = result.photo.value;
         startSession.hide();
@@ -57,7 +58,7 @@ $(document).ready(() => {
         $.ajax({
             url : "/demo/get-photo/" + photoNonce,
             success: (result) => {
-                console.log(result);
+
                 btnPhotoLoading(false);
                 var img = photoModal.find('img.img-photo');
                 img.attr('src', result.data.image.data );
