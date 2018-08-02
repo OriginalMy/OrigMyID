@@ -5,9 +5,9 @@ var options = { method: 'POST',
   headers: { 
      'Cache-Control': 'no-cache',
      'Content-Type': 'application/json',
-     Authorization: 'ORIG-8742-DEVV' 
+     Authorization: 'Chave de API fornecida pela OriginalMy' 
   },
-  body: { cid: '01', token: '37f051fefce4429d' },
+  body: { cid: 'ID do CLiente fornecida pela OriginalMy', token: 'Fornecido pela API de usuário' },
   json: true };
 
 request(options, function (error, response, body) {

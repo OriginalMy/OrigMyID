@@ -13,7 +13,7 @@
     "LONG_TEXT_07" : "From this result and possession of this information you can process the user's registration and log in.",
     "LONG_TEXT_08" : "As parameters for 'OMID' we have 'CID', 'ENV', 'fields':",
     "LONG_TEXT_09" : "With the 'nonce' of the image obtained in the decryption process, a new request is needed to get the images ('photo' and 'photodocument'). This request must be sent with the Authorization Header with 'OMID_KEY' and 'CID' and 'Token' ('nonce') data.",
-    "PARAM_DESC_CID" : "CustomerID (Obtained with OriginalMy)",
+    "PARAM_DESC_CID" : "CustomerID provided by OriginalMy",
     "PARAM_DESC_ENV" : "For testing: 'stag', for production: 'prod'",
     "PARAM_DESC_FIELDS" : "Fields requested from the user",
     "PARAM_FIELDS_BIRTHDAY" : "Date of birth",
@@ -32,5 +32,9 @@
     "PARAM_FIELDS_PHOTO" : "A 'nonce' to get the user's photo",
     "PARAM_FIELDS_PHOTODOCUMENT" : "A 'nonce' to get the photo of the user document",
     "PARAM_FIELDS_LATITUDE" : "The current geolocation position",
-    "PARAM_FIELDS_LONGITUDE" : "The current geolocation position"
+    "PARAM_FIELDS_LONGITUDE" : "The current geolocation position",
+    "PARAM_CRYPTOGRAPHY_KEY": "Cryptography key provided by OriginalMy",
+    "PARAM_OMID_KEY": "OMID key provided by OriginalMy",
+    "PARAM_AUTHORIZATION": "Chave de API provided by OriginalMy",
+    "PARAM_TOKEN": "Provided by user API"
 }
