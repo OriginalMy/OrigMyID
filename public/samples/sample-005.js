@@ -1,6 +1,6 @@
 $(document).ready(function () {
 
-    var CID = '01';
+    var CID = 'ID do CLiente fornecida pela OriginalMy';
     var ENV = 'stag';
     var fields = [
         'birthday',
