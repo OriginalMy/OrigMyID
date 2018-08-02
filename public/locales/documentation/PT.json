@@ -13,7 +13,7 @@
     "LONG_TEXT_07" : "A partir desse resultado e de posse dessas informações você pode processar o cadastro do usuário e efetuar seu login.",
     "LONG_TEXT_08" : "Como parâmetros para o 'OMID' temos 'CID', 'ENV', 'fields':",
     "LONG_TEXT_09" : "Com o 'nonce' da imagem obtida no processo de descriptografia, uma nova requisição é necessária para obter as imagens('photo' e 'photodocument'). Essa requisição deve ser enviada com o Header de Autorização comtento o 'OMID_KEY' e com os dados de 'CID' e 'Token'('nonce').",
-    "PARAM_DESC_CID" : "ID do CLiente (Obtido com a OriginalMy)",
+    "PARAM_DESC_CID" : "ID do CLiente fornecida pela OriginalMy",
     "PARAM_DESC_ENV" : "Para teste: 'stag', para produção: 'prod'",
     "PARAM_DESC_FIELDS" : "Campos solicitados ao usuário",
     "PARAM_FIELDS_BIRTHDAY" : "Data de nascimento",
@@ -32,5 +32,9 @@
     "PARAM_FIELDS_PHOTO" : "Um 'nonce' para obter a foto do usuário",
     "PARAM_FIELDS_PHOTODOCUMENT" : "Um 'nonce' para obter a foto do documento do usuário",
     "PARAM_FIELDS_LATITUDE" : "A posição de geolocalização atual",
-    "PARAM_FIELDS_LONGITUDE" : "A posição de geolocalização atual"
+    "PARAM_FIELDS_LONGITUDE" : "A posição de geolocalização atual",
+    "PARAM_CRYPTOGRAPHY_KEY": "Chave de criptografia fornecida pela OriginalMy",
+    "PARAM_OMID_KEY": "Chave do OMID fornecida pela OriginalMy",
+    "PARAM_AUTHORIZATION": "Chave de API fornecida pela OriginalMy",
+    "PARAM_TOKEN": "Fornecido pela API de usuário"
 }

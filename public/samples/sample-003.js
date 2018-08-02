@@ -4,10 +4,10 @@ const crypto = require('crypto');
 app.get("/auth/:nonce", function (req, res) {
 
     let urlAPI = 'https://api1.testnet.originalmy.com/login/user';
-    let CID = '01';
-    let OMID_KEY = 'ORIG-8742-DEVV';
-    let CRYPTOGRAPHY_KEY ='27F5DB12FB4F4D1A9EDE13E7C91CA99A';
-    let IV = "9383KJSKLL209329";
+    let CID = 'ID do CLiente fornecida pela OriginalMy';
+    let OMID_KEY = 'Chave do OMID fornecida pela OriginalMy';
+    let CRYPTOGRAPHY_KEY ='Chave de criptografia fornecida pela OriginalMy';
+    let IV = "Chave de criptografia fornecida pela OriginalMy";
     let ALGORITHM = 'aes256';
     let nonce = req.params.nonce;
 

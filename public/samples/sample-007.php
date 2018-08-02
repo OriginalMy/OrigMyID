@@ -10,12 +10,12 @@ $request->setHeaders(array(
   'Postman-Token' => 'b1952512-7a24-1bb8-fc09-4cf638c7c072',
   'Cache-Control' => 'no-cache',
   'Content-Type' => 'application/json',
-  'Authorization' => 'ORIG-8742-DEVV'
+  'Authorization' => 'Chave de API fornecida pela OriginalMy'
 ));
 
 $request->setBody('{ 
-    "cid": "01",
-    "token": "37f051fefce4429d"
+    "cid": "ID do CLiente fornecida pela OriginalMy",
+    "token": "Fornecido pela API de usuário"
 }');
 
 try {

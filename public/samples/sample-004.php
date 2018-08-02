@@ -7,10 +7,10 @@ $app = new \Slim\App;
 $app->get('/auth/{nonce}', function (Request $request, Response $response, array $args) {
     
     $urlAPI = 'https://api1.testnet.originalmy.com/login/user';
-    $CID = '01';
-    $OMID_KEY = 'ORIG-8742-DEVV';
-    $CRYPTOGRAPHY_KEY ='27F5DB12FB4F4D1A9EDE13E7C91CA99A';
-    $IV = "9383KJSKLL209329";
+    $CID = 'ID do CLiente fornecida pela OriginalMy';
+    $OMID_KEY = 'Chave do OMID fornecida pela OriginalMy';
+    $CRYPTOGRAPHY_KEY ='Chave de criptografia fornecida pela OriginalMy';
+    $IV = "Chave de criptografia fornecida pela OriginalMy";
     $ALGORITHM = 'AES-256-CBC';
     $nonce = $args['nonce'];
 
