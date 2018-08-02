@@ -10,7 +10,7 @@ namespace TestCrypto
 
        public static void Main(string[] args)
        {
-           Console.Write(DecryptCrypt7(“U6YPjwMAUEMnS0bOofF13A==“,”3zTvzr3p67VC61jmV54rIYu1545x4TlY”,“60iP0h6vJoEaZT54”));
+           Console.Write(DecryptCrypt7(CRYPTOGRAPHY_KEY,IV));
        }
 
        public static string DecryptCrypt7(string data, string keyString, string ivString)
