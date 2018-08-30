@@ -31,6 +31,7 @@
     "PARAM_FIELDS_PHONE" : "Número do Celular",
     "PARAM_FIELDS_PHOTO" : "Um 'nonce' para obter a foto do usuário",
     "PARAM_FIELDS_PHOTODOCUMENT" : "Um 'nonce' para obter a foto do documento do usuário",
+    "PARAM_FIELDS_RESIDENCE" : "Um 'nonce' para obter a foto do comprovante de residência do usuário",
     "PARAM_FIELDS_LATITUDE" : "A posição de geolocalização atual",
     "PARAM_FIELDS_LONGITUDE" : "A posição de geolocalização atual",
     "PARAM_CRYPTOGRAPHY_KEY": "Chave de criptografia fornecida pela OriginalMy",
