@@ -17,7 +17,8 @@ $(document).ready(function () {
         'mobile_screensize',
         'phone',
         'photo',
-        'photodocument'
+        'photodocument',
+        'photoresidence'
     ];
 
     window.OMID = new OMID(CID, ENV, fields, function(result){
