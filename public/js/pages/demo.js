@@ -44,7 +44,7 @@ $(document).ready(() => {
         loginSession.find('span.log-user-mobile_lat').html(result.latitude.value);
         loginSession.find('span.log-user-mobile_lng').html(result.longitude.value);
 
-        photoNonce = result.photo.value;
+        photoNonce = result.photodocument.value;
         startSession.hide();
         loginSession.show();
     }
