@@ -31,6 +31,7 @@
     "PARAM_FIELDS_PHONE" : "Mobile number",
     "PARAM_FIELDS_PHOTO" : "A 'nonce' to get the user's photo",
     "PARAM_FIELDS_PHOTODOCUMENT" : "A 'nonce' to get the photo of the user document",
+    "PARAM_FIELDS_PHOTODOCUMENTBACK" : "A 'nonce' to get the back photo of the user document",
     "PARAM_FIELDS_RESIDENCE" : "A 'nonce' to get the photo of the user proof of address",
     "PARAM_FIELDS_LATITUDE" : "The current geolocation position",
     "PARAM_FIELDS_LONGITUDE" : "The current geolocation position",

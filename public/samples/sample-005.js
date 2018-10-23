@@ -18,6 +18,7 @@ $(document).ready(function () {
         'phone',
         'photo',
         'photodocument',
+        'photodocumentback',
         'photoresidence'
     ];
 
