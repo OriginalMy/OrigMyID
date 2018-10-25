@@ -39,6 +39,7 @@ server.on('listening', onListening);
 app.set("view engine", "ejs");
 app.set("views", "./src/views")
 app.use(express.static("public"));
+app.use(express.static("node_modules"));
 
 function normalizePort(val) {
     var port = parseInt(val, 10);

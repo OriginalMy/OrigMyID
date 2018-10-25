@@ -36,17 +36,46 @@ $(document).ready(() => {
         })
     }
 
-    function callAuthSuccess(result)
+    function callAuthSuccess(resultCallback)
     {
-        loginSession.find('span.log-user-email').html(result.email.value);
-        loginSession.find('span.log-user-name').html(result.name.value);
-        loginSession.find('span.log-user-blockchainid').html(result.blockchainid.value);
-        loginSession.find('span.log-user-mobile_lat').html(result.latitude.value);
-        loginSession.find('span.log-user-mobile_lng').html(result.longitude.value);
+        var emailHash = CryptoJS.HmacSHA256(resultCallback.email.value, resultCallback.blockchainid.value);
+        var nameHash = CryptoJS.HmacSHA256(resultCallback.name.value, resultCallback.blockchainid.value);
 
-        photoNonce = result.photodocument.value;
-        startSession.hide();
-        loginSession.show();
+        var validationRequest = {
+            email: emailHash.toString()
+            , name: nameHash.toString()
+        }
+
+        $.ajax({
+            url : "https://api1.originalmy.com/users/validate-hash-user-data/" + resultCallback.blockchainid.value,
+            headers: {
+                'authorization': 'T1JJRy04NzQyLURFVlY='
+            },
+            data: validationRequest,
+            type: "post",
+            success: (result) => {
+                debugger;
+                var rsEmail = result.data.valdation_info.filter((item) => item.key == 'email')[0];
+                var rsName = result.data.valdation_info.filter((item) => item.key == 'name')[0];
+
+                loginSession.find('span.log-user-email').html(resultCallback.email.value + ', <b>Informacao validada por hmac:</b> ' + (rsEmail.valid === true ? "Sim" : "Não"));
+                loginSession.find('span.log-user-name').html(resultCallback.name.value + ', <b>Informacao validada por hmac:</b> ' + (rsName.valid === true ? "Sim" : "Não"));
+                loginSession.find('span.log-user-blockchainid').html(resultCallback.blockchainid.value);
+                loginSession.find('span.log-user-mobile_lat').html(resultCallback.latitude.value);
+                loginSession.find('span.log-user-mobile_lng').html(resultCallback.longitude.value);
+
+                photoNonce = resultCallback.photodocument.value;
+                startSession.hide();
+                loginSession.show();
+            },
+            error: function(result) {
+                console.error(result);
+            },
+            
+        })
+
+        
+        
     }
 
     function getPhoto(){
